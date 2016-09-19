@@ -1,2 +1,2 @@
-# Advanced-CS-Club-Materials
-Materials for Advanced CS Club at SJAM 2016-17.
+# ROOM-B-CS-Club-Materials
+Materials for ROOM B CS Club at SJAM 2016-17.
