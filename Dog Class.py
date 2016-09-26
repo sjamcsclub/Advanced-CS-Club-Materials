@@ -20,8 +20,7 @@ class Dog:
             print(choice(["Woof", "Grr", "howl", "arf", "ruff", "bow-wow"]))
             c = choice([0, 2, 3, 1, 5])
             sleep(c)
-            # print(c)
-
+            
     def feed(self, foodGrams):
         self.weight += (foodGrams / 1000) / 2
 
