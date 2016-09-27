@@ -20,19 +20,16 @@ class Polygon:
 
 class Rectangle(Polygon):
     def __init__(self):
-        # automatically sets the __init__ of rectangle to have 2 sides
+        # automatically sets the __init__ to have 2 sides
         Polygon.__init__(self, 2)
 
     def getArea(self):
-        s1, s2 = self.sides
-        s1*s2
-        # check to see if the user has entered anything otherwise s1*s2 will not be possible (TypeError)
+        side1, side2 = self.sides
+        # check to see if the user has entered anything otherwise side1*side2 will not be possible (TypeError)
         # hint: look at Polygon __init__ to determine data type
 
     # Also add an get perimeter method make sure to implement the feature to check if the user has entered any side lengths
 
 
-# add another class
 b24 = Rectangle()
-# b24.EnterSL()
 b24.getArea()
