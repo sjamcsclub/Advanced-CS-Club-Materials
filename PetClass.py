@@ -47,17 +47,14 @@ class dog(Pet):
 
 class bird(Pet):
     def do_business(self):
-        # overwrite existing method as birds do business in their cage
+        # overwrites existing method as birds do business in their cage
         print(self.name, "did it's business in its cage")
 
 class cat(Pet):
     def sleep(self):
         print("sleep")
-#   Add method that overwrites the do business to print that name went to the litter box
-
-
-
-# add more methods to the cat class
+# Add method that overwrites the do business to print that name went to the litter box
+# Add more methods to the cat class
 
 
 

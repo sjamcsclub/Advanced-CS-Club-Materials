@@ -20,8 +20,7 @@ class Dog:
             print(choice(["Woof", "Grr", "howl", "arf", "ruff", "bow-wow"]))
             c = choice([0, 2, 3, 1, 5])
             sleep(c)
-            # print(c)
-
+    # add method to Dog class
     def feed(self, foodGrams):
         self.weight += (foodGrams / 1000) / 2
 
@@ -39,6 +38,6 @@ Yorkie.bark()
 Yorkie.age()
 Yorkie.feed(100)
 print("My Yorkie weighs", Yorkie.weight, "Kg")
-
+# create an instance of the dog class name the dog "Monty"
 GermanShep = Dog("Jenny", "German Shepard", "Brown", 29, "Female")
 GermanShep.meet(Yorkie)
