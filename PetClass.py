@@ -62,3 +62,5 @@ class cat(Pet):
 hazel = dog("Haze", 1, 12, "Golden", "Male", 123456789)
 hazel.dog_identity()
 hazel.feed(501)
+tweety = bird("Parrot",3,45,"red","male", 890890890)
+tweety.do_business()
