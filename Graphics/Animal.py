@@ -16,7 +16,6 @@ def check(fileName):
     try:
         ind = dataBase[fileName]
         s.create_image(10, 10, image=ind, anchor=NW)
-        # s.update()
     except KeyError:
         print("Does Not Exist In Database")
 
