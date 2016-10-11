@@ -2,21 +2,21 @@ from tkinter import *
 import os
 
 dataBase = {}
-dir = "database\\"
+dirPath = "database\\"
 root = Tk()
 
-for file in os.listdir(dir):
-    fullPath = dir + file
+for file in os.listdir(dirPath):
+    fullPath = dirPath + file
     if file.endswith(".gif"):
         dataBase[fullPath] = (PhotoImage(file=fullPath))
 
 
 def check(fileName):
-    fileName = dir + fileName + ".gif"
+    fileName = dirPath + fileName + ".gif"
     try:
         ind = dataBase[fileName]
         s.create_image(10, 10, image=ind, anchor=NW)
-        s.update()
+        # s.update()
     except KeyError:
         print("Does Not Exist In Database")
 
@@ -24,7 +24,7 @@ def check(fileName):
 def send():
     string = userIn.get()
     check(string)
-    userIn.delete(0,END)
+    userIn.delete(0, END)
 
 
 controlPanel = Frame(root)
