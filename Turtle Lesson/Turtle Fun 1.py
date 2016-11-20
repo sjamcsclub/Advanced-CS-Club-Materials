@@ -15,27 +15,26 @@ def drawCoords(listCoords):
     alex.fillcolor("red")
 
 
-
-def spiral(turtleObject):
+def SquareSpiral(turtleObject):
     for i in range(0, 1000, 10):
         turtleObject.color("red")
         turtleObject.forward(i + 100)
         turtleObject.left(90)
 
 
-def ss2(tess):
-    tess.color("blue")
-
-    # tess.penup()
-    size = 20
-    for i in range(300):
-        tess.stamp()  # Leave an impression on the canvas
+def fun(turtleObject):
+    turtleObject.color("blue")
+    turtleObject.shapesize(0.1)
+    turtleObject.penup()
+    size = 0
+    for i in range(3000):
+        turtleObject.stamp()  # Leave an impression on the canvas
         size += 1  # Increase the size on every iteration
-        tess.forward(size)  # Move tess along
-        tess.right(i ** 2)
+        turtleObject.forward(size)  # Move tess along
+        turtleObject.right(45+i)
 
 
-def ss(turtleObject):
+def spiral(turtleObject):
     turtleObject.color("blue")
 
     turtleObject.penup()
@@ -47,5 +46,4 @@ def ss(turtleObject):
         turtleObject.right(50)
 
 
-spiral()
-
+spiral(alex)
