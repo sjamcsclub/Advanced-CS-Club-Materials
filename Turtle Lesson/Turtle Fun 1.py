@@ -46,5 +46,12 @@ def spiral(turtleObject):
         turtleObject.forward(size)
         turtleObject.right(50)
 
-
-SquareSpiral(alex)
+def star(turtleObject):
+    for i in range(20):
+        turtleObject.forward(i * 10)
+        turtleObject.right(144)
+    
+##fun(alex)
+star(alex)
+##SquareSpira(alex)
+##drawCoords(a)
