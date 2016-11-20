@@ -1,12 +1,20 @@
 from turtle import *
 
 wn = Screen()
+
 alex = Turtle()
+alex.color("hotpink")
+alex.pensize(5)
 
-alex.speed(1)
 
-alex.forward(10)
-alex.backward(10)
-alex.left(20)
 
-mainloop()
+alex.forward(50)
+alex.left(90)
+alex.forward(50)
+alex.left(90)
+alex.forward(50)
+alex.left(90)
+alex.forward(50)
+alex.left(90)
+
+wn.mainloop()

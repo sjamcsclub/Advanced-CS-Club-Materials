@@ -29,9 +29,9 @@ s = Canvas(frame, width=750, height=750)
 s.pack()
 frame.pack(fill='both', expand=True)
 turtle1 = turtle.RawTurtle(s)
-turtle1
+
 box = s.create_rectangle(1, 1, 500, 300, fill="red")
-s.tag_raise(box, turtle1)
+
 
 
 root.bind("<Key>", keydownHandler)
