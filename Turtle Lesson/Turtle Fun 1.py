@@ -16,6 +16,7 @@ def drawCoords(listCoords):
 
 
 def SquareSpiral(turtleObject):
+    turtleObject.hideturtle()
     for i in range(0, 1000, 10):
         turtleObject.color("red")
         turtleObject.forward(i + 100)
@@ -46,4 +47,4 @@ def spiral(turtleObject):
         turtleObject.right(50)
 
 
-spiral(alex)
+SquareSpiral(alex)
