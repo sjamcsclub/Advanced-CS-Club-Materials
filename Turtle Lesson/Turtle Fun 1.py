@@ -1,5 +1,4 @@
 from turtle import *
-from time import sleep
 
 wn = Screen()
 alex = Turtle()
@@ -17,11 +16,11 @@ def drawCoords(listCoords):
 
 
 
-def spiral():
+def spiral(turtleObject):
     for i in range(0, 1000, 10):
-        alex.color("red")
-        alex.forward(i + 100)
-        alex.left(90)
+        turtleObject.color("red")
+        turtleObject.forward(i + 100)
+        turtleObject.left(90)
 
 
 def ss2(tess):
@@ -36,17 +35,17 @@ def ss2(tess):
         tess.right(i ** 2)
 
 
-def ss(tess):
-    tess.color("blue")
+def ss(turtleObject):
+    turtleObject.color("blue")
 
-    tess.penup()
+    turtleObject.penup()
     size = 20
     for i in range(300):
-        tess.stamp()  # Leave an impression on the canvas
-        size += 1  # Increase the size on every iteration
-        tess.forward(size)  # Move tess along
-        tess.right(50)
+        turtleObject.stamp()
+        size += 1
+        turtleObject.forward(size)
+        turtleObject.right(50)
 
 
-drawCoords(a)
+spiral()
 
