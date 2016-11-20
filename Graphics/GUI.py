@@ -26,10 +26,10 @@ controlPanel.grid(row=1, column=1, sticky=NW)
 userIn = Entry(controlPanel)
 userIn.grid(row=1, column=1)
 
-sendB = Button(controlPanel, text="send", command=send)
+sendB = Button(controlPanel, text="Send", command=send)
 sendB.grid(row=1, column=2)
 
-clear = Button(controlPanel, text="clear Output", relief="flat", command=cleardispOut)
+clear = Button(controlPanel, text="Clear Output", relief="flat", command=cleardispOut)
 clear.grid(row=1, column=4)
 
 mode = StringVar()
