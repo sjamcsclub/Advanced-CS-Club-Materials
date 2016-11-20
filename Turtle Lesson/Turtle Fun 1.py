@@ -53,5 +53,7 @@ def star(turtleObject):
     
 ##fun(alex)
 star(alex)
+
+wn.mainloop()
 ##SquareSpira(alex)
 ##drawCoords(a)
