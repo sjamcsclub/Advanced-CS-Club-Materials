@@ -50,6 +50,7 @@ def star(turtleObject):
     for i in range(20):
         turtleObject.forward(i * 10)
         turtleObject.right(144)
+
 def blackHole(turtleObject):
     turtleObject.hideturtle()
     for i in range(180):
