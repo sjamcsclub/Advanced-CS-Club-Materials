@@ -29,9 +29,9 @@ def fun(turtleObject):
     turtleObject.penup()
     size = 0
     for i in range(3000):
-        turtleObject.stamp()  # Leave an impression on the canvas
-        size += 1  # Increase the size on every iteration
-        turtleObject.forward(size)  # Move tess along
+        turtleObject.stamp()
+        size += 1
+        turtleObject.forward(size)
         turtleObject.right(45+i)
 
 

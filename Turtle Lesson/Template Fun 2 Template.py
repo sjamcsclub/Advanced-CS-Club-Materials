@@ -1,7 +1,9 @@
 from turtle import *
 
 # Step 1 Teach Basics about Turtle
-# Step 2
+# Step 2 Let them Play around with basics for 10 min
+# Step 3 Teach Square Spiral
+# Step 4 Let them make spirals 10 min
 
 
 wn = Screen()
