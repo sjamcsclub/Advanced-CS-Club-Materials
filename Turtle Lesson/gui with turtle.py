@@ -8,7 +8,10 @@ f.grid()
 
 
 def addCoords(event):
-    coords.append([event.x/2, event.y/2])
+    
+    x = event.x/2-500
+    y = -event.y/2
+    coords.append([x,y])
     print(coords)
 
 
