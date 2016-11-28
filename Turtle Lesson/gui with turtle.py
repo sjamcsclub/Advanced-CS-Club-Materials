@@ -15,9 +15,9 @@ def addCoords(event):
     x -= 500
     if y < 300:
         y = 300-y
-    if y == 300:
+    elif y == 300:
         y = 0
-    if y > 300:
+    elif y > 300:
         y = -(y%300)
     print(coords)
     coords.append([x,y])
