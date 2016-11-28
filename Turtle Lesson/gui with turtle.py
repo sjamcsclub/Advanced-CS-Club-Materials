@@ -1,6 +1,6 @@
 from tkinter import *
 from turtle import *
-coords = [[33, 0],[-33,0]]
+coords = []
 
 root = Tk()
 f = Frame(root)
@@ -9,8 +9,17 @@ f.grid()
 
 def addCoords(event):
     
-    x = event.x/2-500
-    y = -event.y/2
+    x = event.x
+    y = event.y
+    print(x, y)
+    x -= 500
+    if y < 300:
+        y = 300-y
+    if y == 300:
+        y = 0
+    if y > 300:
+        y = -(y%300)
+    print(coords)
     coords.append([x,y])
     print(coords)
 
@@ -27,8 +36,10 @@ def draw(turtle):
     turtle.penup()
     print(turtle1.xcor())
     for i in coords:
-        turtle.goto(i[0], i[1])
         turtle.pendown()
+        turtle.goto(i[0], i[1])
+        print(i[0], "as", i[1])
+        
     turtle.fillcolor("red")
 
 screen = Canvas(f, height=600, width=1000)
