@@ -8,7 +8,7 @@ def checkCollison():
     print(s.find_closest(turtle1.xcor(),turtle1.ycor()))
 
 def keydownHandler(event):
-    print(event.char)
+    # print(event.char)
     if event.char.lower() == "w":
         turtle1.forward(20)
     elif event.char.lower() == "a":
@@ -30,7 +30,6 @@ s.pack()
 frame.pack(fill='both', expand=True)
 turtle1 = turtle.RawTurtle(s)
 
-box = s.create_rectangle(1, 1, 500, 300, fill="red")
 
 
 

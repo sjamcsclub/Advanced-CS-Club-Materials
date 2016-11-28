@@ -1,17 +1,23 @@
 from tkinter import *
 import turtle
 
-
+ioc = False
 def intelligent_orientation_control():
     pos = turtle1.heading()
-    if pos == 0:
-        return "w", "a", "d", "s"
-    elif pos == 90:
-        return "w", "a", "d", "s"
-    elif pos == 180:
-        return "w", "a", "d", "s"
+    if ioc:
+
+        if pos == 0:
+            return "w", "a", "d", "s"
+        elif pos == 90:
+            return "w", "a", "d", "s"
+        elif pos == 180:
+            return "w", "a", "d", "s"
+        else:
+            return "w", "d", "a", "s"
+
     else:
-        return "w", "d", "a", "s"
+        return "w", "a", "d", "s"
+
 
 
 def keydownHandler(event):
