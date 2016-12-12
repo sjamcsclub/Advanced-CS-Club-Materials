@@ -1,5 +1,4 @@
 import re
-import getpass
 
 file = open("words.txt", "r")
 
@@ -74,10 +73,8 @@ def solve(encryptedText):
         print(possible_combos)
 
 
-# what = getpass.getpass('Password:')
 what = input("Enter Some Text")
 print("Encrypted Message:",what)
 x = encrypt("x", what)
 print(x)
 solve(x)
-##sleep(100)
