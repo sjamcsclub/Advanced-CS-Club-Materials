@@ -1,6 +1,4 @@
-from string import ascii_uppercase as alpha
 import re
-from time import sleep
 import getpass
 
 file = open("words.txt", "r")
@@ -45,38 +43,40 @@ def cleanAll(string):
     return rx.sub(" ", string).strip()
 
 
+def intToChar(integer):
+    return chr(integer+65)
+
+
 def solve(encryptedText):
     words = encryptedText.split(" ")  # splits string into words
     possible_combos = []
     for j in range(len(words)):
         temp = []
-        ind = 1
         file.seek(0)  # Resets readline cursor to the beginning of the file
 
-        while ind != 354980:  # length of file
-            line = file.readline()  # reads a line from the wordlist
+        for line in file:
+            # read a line from the wordlist
             line = cleanAll(line)  # cleans it to be a pretty string making it easy to encrypt and manipulate
 
             # Checks that the line length matches the length of the encrypted string
             # as there is no point to check words that are longer or shorter than the encrypted one
             if len(line) == len(words[j]):
-                
 
-                for i in range(len(alpha)):  # alpha is a string of  "abc...xyz"
+                for i in range(26):
                     # using the alphabet we are going to try all the simple shift possibilities
-                    if encrypt(alpha[i], line) == words[j]:
-                        # if the line encrypted with shift alpha[i] is equal to the encrypted word then we have found
+                    if encrypt(intToChar(i), line) == words[j]:
+                        # if the line encrypted with shift  is equal to the encrypted word then we have found
                         # a possibility thus we will append it to temp
-                        print("Answer is:", line)
+                        key = (intToChar(i))
+                        print("Answer is:", line, key)
                         temp.append(line)
-            ind += 1
-
         possible_combos.append(temp)
         print(possible_combos)
 
 
-what = getpass.getpass('Password:')
-# what = input()
+# what = getpass.getpass('Password:')
+what = input("Enter Some Text")
+print("Encrypted Message:",what)
 x = encrypt("x", what)
 print(x)
 solve(x)
