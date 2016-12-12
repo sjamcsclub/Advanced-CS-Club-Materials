@@ -51,10 +51,10 @@ def solve(encryptedText):
     possible_combos = []
     for j in range(len(words)):
         temp = []
-        file.seek(0)  # Resets readline cursor to the beginning of the file
+        file.seek(0)  # Resets line reading cursor to the beginning of the file
 
         for line in file:
-            # read a line from the wordlist
+            # read a line from the word List
             line = cleanAll(line)  # cleans it to be a pretty string making it easy to encrypt and manipulate
 
             # Checks that the line length matches the length of the encrypted string
