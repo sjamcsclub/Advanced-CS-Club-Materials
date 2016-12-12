@@ -10,6 +10,6 @@ def showShift(key):
     return dispStr
 
 print(alpha)
-print(showShift("XC"))
+print(showShift("Z"))
 
     

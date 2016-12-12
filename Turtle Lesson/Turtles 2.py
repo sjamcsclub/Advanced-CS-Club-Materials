@@ -2,6 +2,8 @@ from tkinter import *
 import turtle
 
 ioc = False
+
+
 def intelligent_orientation_control():
     pos = turtle1.heading()
     if ioc:
@@ -19,7 +21,6 @@ def intelligent_orientation_control():
         return "w", "a", "d", "s"
 
 
-
 def keydownHandler(event):
     a = intelligent_orientation_control()
     if event.char.lower() == a[0]:
@@ -34,7 +35,6 @@ def keydownHandler(event):
 
 root = Tk()
 
-
 frame = Frame(bg='black')
 Label(frame, text='Hello', bg='grey', fg='white').pack(fill='x')
 s = Canvas(frame, width=750, height=750)
@@ -43,6 +43,5 @@ frame.pack(fill='both', expand=True)
 turtle1 = turtle.RawTurtle(s)
 
 root.bind("<Key>", keydownHandler)
-
 
 root.mainloop()

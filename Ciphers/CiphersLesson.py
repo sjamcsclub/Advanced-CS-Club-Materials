@@ -1,6 +1,8 @@
 from string import ascii_uppercase as alpha
 import re
+from time import sleep
 import getpass
+
 file = open("words.txt", "r")
 
 
@@ -55,9 +57,10 @@ def solve(encryptedText):
             line = file.readline()  # reads a line from the wordlist
             line = cleanAll(line)  # cleans it to be a pretty string making it easy to encrypt and manipulate
 
+            # Checks that the line length matches the length of the encrypted string
+            # as there is no point to check words that are longer or shorter than the encrypted one
             if len(line) == len(words[j]):
-                # Checks that the line length matches the length of the encrypted string
-                # as there is no point to check words that are longer or shorter than the encrypted one
+                
 
                 for i in range(len(alpha)):  # alpha is a string of  "abc...xyz"
                     # using the alphabet we are going to try all the simple shift possibilities
@@ -71,7 +74,10 @@ def solve(encryptedText):
         possible_combos.append(temp)
         print(possible_combos)
 
+
 what = getpass.getpass('Password:')
+# what = input()
 x = encrypt("x", what)
 print(x)
 solve(x)
+##sleep(100)

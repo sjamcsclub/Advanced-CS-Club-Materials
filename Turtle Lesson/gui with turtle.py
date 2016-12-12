@@ -25,6 +25,7 @@ def addCoords(event):
 
 
 def setPath():
+    global coords
     coords = []
     screen.bind("<Button-1>", addCoords)
 
