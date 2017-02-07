@@ -1,6 +1,5 @@
 class Queue:
-    # FIFO
-
+    """Stack class represents a first-in-first-out (FIFO) stack of objects"""
     def __init__(self):
         self.items = []
 

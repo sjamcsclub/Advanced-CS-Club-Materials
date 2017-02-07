@@ -1,5 +1,5 @@
 class Stack:
-    # LIFO
+    """Stack class represents a last-in-first-out (LIFO) stack of objects"""
     def __init__(self):
         self.items = []
 
